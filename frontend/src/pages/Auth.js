@@ -41,12 +41,12 @@ const Auth = () => {
       sendRequest("signup")
         .then((data) => localStorage.setItem("userId", data.user._id))
         .then(() => dispatch(authActions.login()))
-        .then(() => navigate("/reservations"));
+        .then(() => navigate("/flight"));
     } else {
       sendRequest()
         .then((data) => localStorage.setItem("userId", data.user._id))
         .then(() => dispatch(authActions.login()))
-        .then(() => navigate("/reservations"));
+        .then(() => navigate("/flight"));
     }
   };
   return (
