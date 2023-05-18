@@ -4,7 +4,7 @@ import reservationRouter from "./routes/reservation-carroutes.js";
 import router from "./routes/user-routes.js";
 import cors from 'cors';
 
-
+//creating the express app 
 const app = express();
 app.use (cors());
 app.use(express.json());
@@ -13,8 +13,9 @@ app.use("/api/reservation",reservationRouter);
 
 mongoose.set('strictQuery', false);
 mongoose.set('strictPopulate', false);
-mongoose 
-  .connect(
+
+//connecting to the database
+mongoose.connect(
     "mongodb+srv://Dilmi16:Dilmi16@cluster1.kv1naiq.mongodb.net/?retryWrites=true&w=majority"
   )
   .then(() => app.listen(5000))

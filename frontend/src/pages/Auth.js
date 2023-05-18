@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { authActions } from '../store/store'
 import { useNavigate } from "react-router-dom";
 
+//initializing the auth component
 const Auth = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -20,6 +21,7 @@ const Auth = () => {
       [e.target.name]: e.target.value,
     }));
   };
+  //sending the data to the backend
   const sendRequest = async (type = "login") => {
     const res = await axios
       .post(`http://localhost:5000/api/user/${type}`, {
@@ -34,6 +36,7 @@ const Auth = () => {
     return data;
   };
 
+  //handling the submit button 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(inputs);

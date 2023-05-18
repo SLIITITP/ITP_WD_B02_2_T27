@@ -72,12 +72,12 @@ const UpdateCarReservation = () => {
 
   });
   
+  //getting the data from the form
   useEffect(() => {
     const getData = () => {
       axios
       .get(`http://localhost:5000/api/reservation/${id}`)
       .then((response) => {
-        // setValues({...values, firstName : response.data.firstName,lastName : response.data.lastName,email : response.data.email,phone : response.data.phone});
         setValues(response.data.reservation)
       })
       .catch((error) => {
@@ -93,6 +93,7 @@ const UpdateCarReservation = () => {
     })
    
   }
+//sending the data to the backend
 const navigate = useNavigate();
   const handleSubmit =(e) =>{
     console.log(values)
@@ -108,7 +109,7 @@ const navigate = useNavigate();
     });
 }
 
-
+//returning the form to the page
 return (
   <Container>
   <Header />

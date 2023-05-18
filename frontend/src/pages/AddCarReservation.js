@@ -103,6 +103,7 @@ const AddReservation = () => {
 
   // //validate the phone number
   // if (name === "phone" && !validatePhoneNumber(value)) {
+  //   alert('Phone number is invalid. Please enter a valid phone number.'); pattern="\\+[0-9]{12}" 
   //   console.log("Phone number is invalid. Please enter a valid phone number.");
   //   return;
   // }
@@ -155,7 +156,7 @@ const AddReservation = () => {
         <Input name='firstName' value={inputs.firstName} onChange={handleChange} type='text' placeholder='First Name' required/>
         <Input name='lastName' value={inputs.lastName} onChange={handleChange} type='text' placeholder='Last Name' required/>
         <Input name='email' value={inputs.email}  type='email' onChange={handleChange} placeholder='Email' required/>
-        <Input name='phone' value={inputs.phone}  type='text' onChange={handleChange} placeholder='Phone Number' pattern="\\+[0-9]{12}" required maxLength={13}/>
+        <Input name='phone' value={inputs.phone}  type='text' onChange={handleChange} placeholder='Phone Number'required maxLength={13}/>
         <select name='carType' value={inputs.carType}  onChange={handleChange}  required>
         <option value=''>Select Car Type</option>
         <option value='Sedan'> Sedan EV</option>
