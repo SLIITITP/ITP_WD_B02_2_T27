@@ -1,0 +1,65 @@
+.Container{
+    display: flex;  
+    flex-direction: column;
+}
+
+.NavBar{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.Logo{
+    color: #2A96B8;
+    font-weight: 600;
+}
+
+.Right{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.Menu{
+    display: flex;
+    gap: 30px;
+}
+
+.MenuItems{
+    font-weight: 500;
+}
+
+.NavLink{
+    text-decoration: none;
+        color: #919396;
+    &.active{
+        color: rgb(42, 150, 184);
+    }
+    :hover{
+        color: rgb(42, 150, 184);
+    }
+}
+
+.Button{
+    border: none;
+    padding: 10px 20px;
+    background-color: #FFE607;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    :hover{
+        background-color: #c0b01c;
+    }
+}
+
+.banner{
+    height: 350px;
+    object-fit: cover;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background: center;
+}

@@ -1,0 +1,98 @@
+.main{
+    padding: 10px;
+    height: 100vh;
+
+}
+
+.layout{
+    display: flex;
+}
+
+.sidebar{
+    min-height: 100%;
+    width: 300px;
+    border-radius: 5px;
+    background-color: #2A96B8;
+    box-shadow: 0 0 2px gray;
+    margin-right: 20px;
+    color: white;
+}
+
+.content{
+    width: 100%;
+    height: 750px;
+}
+
+.item{
+    font-weight: bold ;
+    font-size: 30px;
+  }
+
+.form{
+    margin-right: 250px;
+    margin-left: 250px;
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    border: 4px solid;
+    border-radius: 10px;
+    border-color: rgb(8, 10, 152);
+}
+
+
+
+.label-large {
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+.header{
+    height: 10vh;
+    margin-bottom: 20px;
+    box-shadow: 0 0 2px gray;
+    background-color: white;
+}
+
+.body{
+    height: 110vh;
+    margin-bottom: 20px;
+    box-shadow: 0 0 2px gray;
+    background-color: white;
+}
+
+.logo h6{
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 20px 0px;
+}
+
+.menu{
+    margin-top: 50px;
+}
+
+.menu-item{
+    margin-top: 30px;
+}
+
+.menu-item a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+
+}
+
+.menu-item i{
+    font-size: 1.2rem;
+    margin: 0 15px;
+}
+
+.active{
+    background-color: white;
+    padding: 10px;
+}
+
+.active a, .active i{
+    color: rgb(6, 7, 86);
+}
