@@ -12,7 +12,7 @@ export const Body = styled.div`
   justify-content: center;
 `
 export const Form = styled.form`
-  background-color: #A9C4B9;
+  background-color: #ECEFEE;
   width: 900px;
   margin: 90px 0;
   padding: 40px;
@@ -55,13 +55,20 @@ export const Input = styled.input`
 `
 
 //creating the page component and adding the form to add a reservation
-const UpdateReservation = () => {
+const UpdateCarReservation = () => {
   const {id} = useParams();
   const [values, setValues] = useState({
         firstName : "",
         lastName : "",
         email : "",
-        phone : ""
+        phone : "",
+        carType : "",
+        country : "",
+        startDate : "",
+        endDate : "",
+        licenseNumber : "",
+
+
 
   });
   
@@ -112,6 +119,19 @@ return (
       <Input name='lastName'  type='text' placeholder='Last Name' value={values.lastName} required onChange={handleChange}/>
       <Input name='email'  type='email'  placeholder='Email' value={values.email} required onChange={handleChange}/>
       <Input name='phone'  type='text'  placeholder='Phone Number' value={values.phone} required maxLength={12} onChange={handleChange}/>
+      <fieldset disabled = "disabled" >
+      <select name='carType' value={values.carType}  onChange={handleChange}  required>
+        <option value=''>Select Car Type</option>
+        <option value='Sedan'> Sedan EV</option>
+        <option value='Sedan EV'>SUV Luxury</option>
+        <option value='SUV Luxury'> Sedan Sport</option>
+        <option value='Sedan Economy'> Sedan Economy</option>
+        <option value='Sedan Luxury'>Sedan Luxury</option>
+        <option value= 'Hatchback Economy'>Hatchback Economy</option>
+        </select></fieldset>
+        <fieldset disabled = "disabled" ><Input name='country' value={values.country} type='text' onChange={handleChange} placeholder='Country' required/></fieldset>       
+        <fieldset disabled = "disabled" ><Input name='licenseNumber' value={values.licenseNumber} type='text' onChange={handleChange} placeholder='NIC Number' required/> 
+        </fieldset>
       <ButtonContainer>
         <Button type='submit'>Save</Button>
       </ButtonContainer>
@@ -123,4 +143,4 @@ return (
 }
 
 
-export default UpdateReservation
+export default UpdateCarReservation
