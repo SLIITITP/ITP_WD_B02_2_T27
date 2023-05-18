@@ -70,8 +70,13 @@ const AddReservation = () => {
     licenseNumber:"",
   });
 
-  // Define the regular expression for email validation
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//   // Function to validate phone number
+// const validatePhoneNumber = (phoneNumber) => {
+//   const phonePattern = /^\+[0-9]{12}$/;
+//   return phonePattern.test(phoneNumber);
+  
+// };
+
 
   //handling the input changes
   const handleChange = (e) => {
@@ -95,11 +100,12 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return;
     }
   }
-  if ((name === "emailrg" && !emailRegex.test(value)) && e.type !== "blur" && e.type !== "submit") {
-    // Email is not valid
-      alert('Invalid email');
-      return;
-  }
+
+  // //validate the phone number
+  // if (name === "phone" && !validatePhoneNumber(value)) {
+  //   console.log("Phone number is invalid. Please enter a valid phone number.");
+  //   return;
+  // }
   
     setInputs((prevState) => ({
       ...prevState,
@@ -148,8 +154,8 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         <FormHeading>Add Reservation</FormHeading>
         <Input name='firstName' value={inputs.firstName} onChange={handleChange} type='text' placeholder='First Name' required/>
         <Input name='lastName' value={inputs.lastName} onChange={handleChange} type='text' placeholder='Last Name' required/>
-        <Input name='email' value={inputs.email} onChange={handleChange}  type='email'  placeholder='Email' required/>
-        <Input name='phone' value={inputs.phone}  type='text' onChange={handleChange} placeholder='Phone Number' required maxLength={12}/>
+        <Input name='email' value={inputs.email}  type='email' onChange={handleChange} placeholder='Email' required/>
+        <Input name='phone' value={inputs.phone}  type='text' onChange={handleChange} placeholder='Phone Number' pattern="\\+[0-9]{12}" required maxLength={13}/>
         <select name='carType' value={inputs.carType}  onChange={handleChange}  required>
         <option value=''>Select Car Type</option>
         <option value='Sedan'> Sedan EV</option>
@@ -163,19 +169,6 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         <label>Start Date - <Input name='startDate' value={inputs.startDate} type='date' onChange={handleChange} placeholder='Start Date' required/></label>
         <label> End Date  - <Input name='endDate' value={inputs.endDate} type='date' onChange={handleChange} placeholder='End Date' required/></label>
         <Input name='licenseNumber' value={inputs.licenseNumber} type='text' onChange={handleChange} placeholder='License Number' required/> 
-        <Form.Item
-                label={<span className="label-large">Email</span>}
-                className="item"
-                name="email"
-                rules={[
-                  {
-                    required: true,
-                    message: "please enter your email",
-                  },
-                  { type: "email", message: "Please enter a valid email" },
-                ]}
-              ></Form.Item>
-        
         <ButtonContainer>
           <Button onClick={handleSubmit}
           >Make Reservation</Button>
