@@ -69,7 +69,7 @@ const AddReservation = () => {
     endDate:"",
     licenseNumber:"",
   });
-  
+
   // Define the regular expression for email validation
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -95,10 +95,10 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return;
     }
   }
-  if (name === 'email' && !emailRegex.test(value)) {
+  if ((name === "emailrg" && !emailRegex.test(value)) && e.type !== "blur" && e.type !== "submit") {
     // Email is not valid
-    console.log('Invalid email');
-    // You can display an error message or perform any other validation-related actions here
+      alert('Invalid email');
+      return;
   }
   
     setInputs((prevState) => ({
@@ -148,7 +148,7 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         <FormHeading>Add Reservation</FormHeading>
         <Input name='firstName' value={inputs.firstName} onChange={handleChange} type='text' placeholder='First Name' required/>
         <Input name='lastName' value={inputs.lastName} onChange={handleChange} type='text' placeholder='Last Name' required/>
-        <Input name='email' value={inputs.email}  type='email' onChange={handleChange} placeholder='Email' required/>
+        <Input name='email' value={inputs.email} onChange={handleChange}  type='email'  placeholder='Email' required/>
         <Input name='phone' value={inputs.phone}  type='text' onChange={handleChange} placeholder='Phone Number' required maxLength={12}/>
         <select name='carType' value={inputs.carType}  onChange={handleChange}  required>
         <option value=''>Select Car Type</option>
@@ -163,6 +163,19 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         <label>Start Date - <Input name='startDate' value={inputs.startDate} type='date' onChange={handleChange} placeholder='Start Date' required/></label>
         <label> End Date  - <Input name='endDate' value={inputs.endDate} type='date' onChange={handleChange} placeholder='End Date' required/></label>
         <Input name='licenseNumber' value={inputs.licenseNumber} type='text' onChange={handleChange} placeholder='License Number' required/> 
+        <Form.Item
+                label={<span className="label-large">Email</span>}
+                className="item"
+                name="email"
+                rules={[
+                  {
+                    required: true,
+                    message: "please enter your email",
+                  },
+                  { type: "email", message: "Please enter a valid email" },
+                ]}
+              ></Form.Item>
+        
         <ButtonContainer>
           <Button onClick={handleSubmit}
           >Make Reservation</Button>
