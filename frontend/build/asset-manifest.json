@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ddcb4831.css",
+    "main.js": "/static/js/main.94ac5d4e.js",
+    "static/media/carbanner.jpg": "/static/media/carbanner.2fb870693ee1a10b4979.jpg",
+    "static/media/payment.png": "/static/media/payment.ec33274dfdab608d3f13.png",
+    "static/media/flightbanner.jpg": "/static/media/flightbanner.44ef3f42f9b949f4d4be.jpg",
+    "index.html": "/index.html",
+    "main.ddcb4831.css.map": "/static/css/main.ddcb4831.css.map",
+    "main.94ac5d4e.js.map": "/static/js/main.94ac5d4e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ddcb4831.css",
+    "static/js/main.94ac5d4e.js"
+  ]
+}
