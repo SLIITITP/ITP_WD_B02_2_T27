@@ -5,6 +5,7 @@ import Flights from './pages/Flights';
 import Auth from './pages/Auth';
 import UpdateReservation from './pages/UpdateReservation';
 import Cars from './pages/Cars';
+import Payments from './pages/Payments'
 function App() {
   return (
       <Routes>
@@ -14,6 +15,8 @@ function App() {
         <Route path='/reservations' element={<Reservations/>}/>
         <Route path='/flights' element={<Flights/>}/>
         <Route path='/cars' element={<Cars/>}/>
+        <Route path='/payments' element={<Payments/>}/>
+  
       
       </Routes>
   );

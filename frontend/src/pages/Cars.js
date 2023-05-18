@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container } from './Reservations'
-import Header from '../components/Header'
+import HeaderC from '../components/HeaderC'
 import { Body } from './AddReservation'
 import styled from 'styled-components'
 import Footer from '../components/Footer'
@@ -37,7 +37,7 @@ const Cars = () => {
 
     //cars container for displaying all cars
     <Container>
-    <Header />
+    <HeaderC />
     <Body>
       <CardContainer>
           <Card sx={{ minWidth: 200 }}>

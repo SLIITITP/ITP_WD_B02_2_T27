@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import banner from '../assets/banner.jpg'
+import carbanner from '../assets/carbanner.jpg'
 import { NavLink as StyledNavLink } from 'react-router-dom'
 
 const Container = styled.div`
@@ -62,7 +62,7 @@ const Banner = styled.img`
     object-fit: cover;
     align-items: center;
     justify-content: center;
-    background: url(${banner}) center;
+    background: url(${carbanner}) center;
     background-size: cover;
 
 `
@@ -98,7 +98,7 @@ const Header = () => {
                     <NavLink to={'/packages'}>Packages</NavLink>
                     </MenuItems>
                     <MenuItems>
-                    <NavLink to={'/cars'}>Cars</NavLink>
+                    <NavLink to={'/'}>Cars</NavLink>
                     </MenuItems>
                 </Menu>
                 <ButtonContainer>
@@ -112,14 +112,15 @@ const Header = () => {
         <SubNav>
         <Menu>
                     <MenuItems>
-                    <NavLink to={'/flights'}>Flights</NavLink>
+                    <NavLink to={'/cars'}>Cars</NavLink>
                     </MenuItems>
                     <MenuItems>
-                    <NavLink to={'/reservations'}>Reservations</NavLink>
+                    <NavLink to={'/add-carreservation'}>Add Reservation</NavLink>
                     </MenuItems>
                     <MenuItems>
-                    <NavLink to={'/add-reservation'}>Add Reservation</NavLink>
+                    <NavLink to={'/carreservations'}>Vehicle Reservations</NavLink>
                     </MenuItems>
+                   
                 </Menu>
         </SubNav>
     </Container>
