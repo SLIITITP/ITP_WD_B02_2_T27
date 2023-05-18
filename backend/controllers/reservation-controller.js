@@ -28,7 +28,7 @@ export const addReservation = async (req, res, next) => {
     return res.status(400).json({ message: "Unable To Find User By This ID" });
   }
   const reservation = new Reservation({
-    flightName, firstName, lastName, email, phone, country, date, fClass, noOfPassengers, user,
+    flightName, firstName, lastName, email, phone, country, date, fClass, noOfPassengers,user,
   });
   try {
     const session = await mongoose.startSession();

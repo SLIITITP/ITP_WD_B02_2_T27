@@ -133,18 +133,11 @@ const AddReservation = () => {
           <option value="Business">Business</option>
           <option value="Economy">Economy</option>
         </select>
-        {/* <Input name='fClass' value={inputs.fClass}  type='text' onChange={handleChange} placeholder='Class' /> */}
         
         <Input name='noOfPassengers' value={inputs.noOfPassengers}  type='number' placeholder='Number of  Passengers' onChange={handleChange} required/>
-        {/* Select Class
-        <RadioGroup name="fClass" value={inputs.fClass} onChange={handleChange} required>
-        <label>First</label><Radio value="First" />
-        <label>Business</label><Radio value="Business"/>
-        <label>Economy</label><Radio value="Economy"/>
-      </RadioGroup> */}
+       
         <ButtonContainer>
-          <Button onClick={handleSubmit}
-          >Save</Button>
+          <Button onClick={handleSubmit}>Save</Button>
         </ButtonContainer>
       </Form>
     </Body>

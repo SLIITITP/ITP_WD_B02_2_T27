@@ -139,7 +139,8 @@ const Reservations = () => {
     country: reservation.country,
     date: reservation.date,
     fClass: reservation.fClass,
-    noOfPassengers: reservation.noOfPassengers
+    noOfPassengers: reservation.noOfPassengers,
+
   }));
   const getRowId = (row) => {
     return row.reservation_id
