@@ -5,11 +5,19 @@ import carRouter from "./routes/user-carroutes.js";
 import reservationRouter from "./routes/reservation-routes.js";
 import router from "./routes/user-routes.js";
 import cors from 'cors';
-
+import cookieParser from 'cookie-parser'
+// import package  route 
+import pakagerouter from '../backend/routes/pakageRoute.js'
+//import hotel route
+import hotelroute from './routes/hotelRoute.js'
 
 const app = express();
 app.use (cors());
 app.use(express.json());
+
+//package route
+app.use('api/package',pakagerouter)
+app.use('api/hotel',hotelroute)
 
 //car reservation routes
 app.use("/api/user",carRouter);
