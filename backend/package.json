@@ -1,0 +1,27 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.2",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.6",
+    "multer": "^1.4.4",
+    "nodemon": "^2.0.15",
+    "query-string": "^7.1.1",
+    "querystring": "^0.2.1",
+    "react-router-dom": "^6.2.2",
+    "stringify": "^5.2.0",
+    "uniqid": "^5.4.0"
+  }
+}

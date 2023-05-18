@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+
+
+
+.card{
+	background-color: #ffffff;
+	border-radius: 0.8rem;
+	margin: 1rem;
+	width: 210px;
+	max-width: 50rem;
+	height: 335px;
+	
+}
+
+.row{
+	margin-left: 0rem;
+	
+	
+}
+
+.card-img-top{
+	width: 9.3rem;
+	height: 12.8rem;
+	margin-top: 1rem;
+}
+
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+  }
+  .row.center {
+	justify-content: center;
+  }
+
+ 
+.inventry-medium{
+	margin-left: 15rem;
+	margin-right: 5rem;
+}
+
+.inventry-medium{
+	width: 20rem;
+	height: 30rem;
+}
+  
+.table-medium{
+	margin-right: 15rem;
+} 
+
+.col1{
+	width:5%
+}
+
+.col2{
+	width:10%
+}
+
+.col3{
+	width:18%
+}
+
+.col4{
+	width:10%
+}
+
+.col5{
+	width:10%
+}
+
+.col6{
+	width:11%
+}
+
+.Container{
+    display: flex;  
+    flex-direction: column;
+}
+
+.NavBar{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.Logo{
+    color: #2A96B8;
+    font-weight: 600;
+}
+
+.Right{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.Menu{
+    display: flex;
+    gap: 30px;
+}
+
+.MenuItems{
+    font-weight: 500;
+    text-decoration:none;
+}
+
+.NavLink{
+    text-decoration: none;
+        color: #919396;
+    &.active{
+        color: rgb(42, 150, 184);
+    }
+    :hover{
+        color: rgb(42, 150, 184);
+    }
+}
+
+.Button{
+    border: none;
+    padding: 10px 20px;
+    background-color: #FFE607;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    :hover{
+        background-color: #c0b01c;
+    }
+}
+
+.banner{
+    height: 350px;
+    object-fit: cover;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background: center;
+}
+
+.footer{
+    width: 100%;
+    width: 1024px;
+    font-size: 12px;
+  }
+  
+  .fLists{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+  
+  .fList{
+    list-style: none;
+    padding: 0;
+  }
+  
+  .fListItem{
+    margin-bottom: 10px;
+    color: #003580;
+    cursor: pointer;
+  }
+
