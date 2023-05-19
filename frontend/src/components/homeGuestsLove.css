@@ -1,0 +1,45 @@
+.hgl{
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.hglItem{
+    flex: 1;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hglImg{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.hglName{
+    font-weight: bold;
+}
+
+.hglCity{
+    font-weight: 300;
+}
+
+.hglPrice{
+    font-weight: 500;
+}
+
+.hglRating>button{
+    background-color: #003580;
+    color: white;
+    border: none;
+    padding: 3px;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+
+.hglrating>span{
+    font-size: 14px;
+}
