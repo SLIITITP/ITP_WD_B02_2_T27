@@ -127,13 +127,7 @@ const AddReservation = () => {
         <Input name='flightName' value={inputs.flightName}  onChange={handleChange} type='text' placeholder='Flight Name' required/>
         <Input name='country' value={inputs.country} type='text' onChange={handleChange} placeholder='Country' required/>
         <Input name='date' value={inputs.date } onChange={handleChange} type='date' placeholder='Date' required />
-        <select name='fClass'  value ={inputs.fClass} onChange={handleChange} required>
-          <option value="">Select Class</option>
-          <option value="First">First</option>
-          <option value="Business">Business</option>
-          <option value="Economy">Economy</option>
-        </select>
-        
+        <Input name='fClass' value={inputs.fClass } onChange={handleChange} type='text' placeholder='Class' required />
         <Input name='noOfPassengers' value={inputs.noOfPassengers}  type='number' placeholder='Number of  Passengers' onChange={handleChange} required/>
        
         <ButtonContainer>
